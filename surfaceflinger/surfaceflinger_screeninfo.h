@@ -50,7 +50,9 @@
 #include <QSizeF>
 #include <QSize>
 
-QT_BEGIN_NAMESPACE
+#include <QLoggingCategory>
+
+Q_DECLARE_LOGGING_CATEGORY(QPA_LOG_SURFACEFLINGER)
 
 class SurfaceFlingerScreenInfo {
 public:
@@ -67,7 +69,5 @@ private:
     int m_screenDepth;
     float m_refreshRate;
 };
-
-QT_END_NAMESPACE
 
 #endif /* SURFACEFLINGER_SCREENINFO_H */

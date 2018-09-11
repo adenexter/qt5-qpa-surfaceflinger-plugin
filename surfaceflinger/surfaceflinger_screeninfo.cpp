@@ -55,6 +55,8 @@
 
 #include <hybris/surface_flinger/surface_flinger_compatibility_layer.h>
 
+Q_LOGGING_CATEGORY(QPA_LOG_SURFACEFLINGER, "qt.qpa.surfaceflinger")
+
 /* Empty namespace */
 namespace {
 
@@ -306,11 +308,11 @@ SurfaceFlingerScreenInfo::SurfaceFlingerScreenInfo(size_t display_id)
         m_refreshRate = fallbackSource.refreshRate();
     }
 
-    qDebug() << "EGLFS: Screen Info";
-    qDebug() << " - Physical size:" << m_physicalScreenSize;
-    qDebug() << " - Screen size:" << m_screenSize;
-    qDebug() << " - Screen depth:" << m_screenDepth;
-    qDebug() << " - Refresh rate:" << m_refreshRate;
+    qCDebug(QPA_LOG_SURFACEFLINGER) << "EGLFS: Screen Info";
+    qCDebug(QPA_LOG_SURFACEFLINGER) << " - Physical size:" << m_physicalScreenSize;
+    qCDebug(QPA_LOG_SURFACEFLINGER) << " - Screen size:" << m_screenSize;
+    qCDebug(QPA_LOG_SURFACEFLINGER) << " - Screen depth:" << m_screenDepth;
+    qCDebug(QPA_LOG_SURFACEFLINGER) << " - Refresh rate:" << m_refreshRate;
 }
 
 QT_END_NAMESPACE
